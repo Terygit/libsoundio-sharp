@@ -13,3 +13,11 @@ libsoundio-sharp makes use of [nclang](https://github.com/atsushieno/nclang/) PI
 libsoundio-sharp is verified to work on Mono on Linux, and supposed to work on .NET Framework and .NET Core.
 
 The library is provided under the MIT License. Samples are ported from libsoundio which is largely attributed to Andrew Kelley (the original libsoundio author).
+
+Original project by Atsushi Eno.
+
+Changelog:
+2022/01/07
+  re-write of sio-list-devices
+  correct offset for sample rates and formats
+  
