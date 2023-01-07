@@ -113,6 +113,7 @@ namespace SoundIOSharp.Example
 				if (c == 'p') {
 					outstream.Pause (true);
 					Console.Error.WriteLine ("pause");
+					want_pause = true;
 				} else if (c == 'P') {
 					want_pause = true;
 				} else if (c == 'u') {
