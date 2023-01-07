@@ -18,6 +18,6 @@ Original project by Atsushi Eno.
 
 Changelog:
 2022/01/07
-  re-write of sio-list-devices
-  correct offset for sample rates and formats
+  - re-write of sio-list-devices
+  - correct offset for sample rates and formats
   
