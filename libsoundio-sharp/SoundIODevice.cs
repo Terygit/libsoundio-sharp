@@ -70,7 +70,7 @@ namespace SoundIOSharp
 			get {
 				var ptr = Marshal.ReadIntPtr (handle, formats_offset);
 				for (int i = 0; i < FormatCount; i++)
-					yield return (SoundIOFormat) Marshal.ReadInt32 (ptr, i);
+					yield return (SoundIOFormat) Marshal.ReadInt32 (ptr, i * sizeof(Int32));
 			}
 		}
 		static readonly int formats_offset = (int)Marshal.OffsetOf<SoundIoDevice> ("formats");
@@ -124,8 +124,8 @@ namespace SoundIOSharp
 				var ptr = Marshal.ReadIntPtr (handle, sample_rates_offset);
 				for (int i = 0; i < SampleRateCount; i++)
 					yield return new SoundIOSampleRateRange (
-						Marshal.ReadInt32 (ptr, i * 2),
-						Marshal.ReadInt32 (ptr, i * 2 + 1));
+						Marshal.ReadInt32 (ptr, i * 2 * sizeof(Int32)),
+						Marshal.ReadInt32 (ptr, (i * 2 + 1)*sizeof(Int32)));
 			}
 		}
 		static readonly int sample_rates_offset = (int)Marshal.OffsetOf<SoundIoDevice> ("sample_rates");
