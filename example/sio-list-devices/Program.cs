@@ -118,8 +118,6 @@ namespace SoundIOSharp.Example
             Console.WriteLine();
             Console.WriteLine($"Latency: {dev.SoftwareLatencyCurrent} ({dev.SoftwareLatencyMin} - {dev.SoftwareLatencyMax})");
 
-            foreach (var pi in typeof (SoundIODevice).GetProperties ())
-            Console.WriteLine ($"    {pi.Name}: {pi.GetValue (dev)}");
         }
 
         static void OnDeviceChange(SoundIO api)
