@@ -20,4 +20,4 @@ Changelog:
 2022/01/07
   - re-write of sio-list-devices
   - correct offset for sample rates and formats
-  
+  - made pause work correctly in sio_sine
